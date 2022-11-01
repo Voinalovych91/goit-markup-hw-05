@@ -30,12 +30,12 @@
         <nav>
           <ul class="site-nav">
             <li class="item">
-              <a href="./index.html" class="link">Студія</a>
+              <a href="./index.html" class="link activ">Студія</a>
             </li>
             <li class="item">
               <a href="./portfolio.html" class="link">Портфоліо</a>
             </li>
-            <li class="item"><a href="" class="link">Контакти</a></li>
+            <li class="item"><a href="#" class="link">Контакти</a></li>
           </ul>
         </nav>
         <ul class="contacts-nav">
@@ -62,7 +62,9 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button data-modal-open type="button" class="button">
+            Замовити послугу
+          </button>
         </div>
       </section>
 
@@ -129,30 +131,45 @@
           <h2 class="section-title">Чим ми займаємося</h2>
           <ul class="portfolio-list">
             <li>
-              <img
-                src="./images/img.jpg"
-                alt="Робочий стіл"
-                width="370"
-                height="294"
-              />
+              <div class="thumb">
+                <img
+                  src="./images/img.jpg"
+                  alt="Робочий стіл"
+                  width="370"
+                  height="294"
+                />
+                <div class="about-photo">
+                  <p class="about-text">ДЕСКТОПНІ ДОДАТКИ</p>
+                </div>
+              </div>
             </li>
 
             <li>
-              <img
-                src="./images/img1.jpg"
-                alt="Ноутбук з телефоном в руках"
-                width="370"
-                height="294"
-              />
+              <div class="thumb">
+                <img
+                  src="./images/img1.jpg"
+                  alt="Ноутбук з телефоном в руках"
+                  width="370"
+                  height="294"
+                />
+                <div class="about-photo">
+                  <p class="about-text">МОБІЛЬНІ ДОДАТКИ</p>
+                </div>
+              </div>
             </li>
 
             <li>
-              <img
-                src="./images/img2.jpg"
-                alt="Планшет"
-                width="370"
-                height="294"
-              />
+              <div class="thumb">
+                <img
+                  src="./images/img2.jpg"
+                  alt="Планшет"
+                  width="370"
+                  height="294"
+                />
+                <div class="about-photo">
+                  <p class="about-text">ДИЗАЙНЕРСЬКІ РІШЕННЯ</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -588,5 +605,15 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <div class="button-close">
+          <button data-modal-close class="close">x</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
